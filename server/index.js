@@ -43,6 +43,17 @@ app.post('/create', (req, res) => {
     })
 })
 
+app.delete('/delete/:id', (req, res) => {
+    const id = req.params.id;
+    db.query('DELETE FROM questions WHERE id = ?', [id], (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    })
+})
+
 app.listen(port, () => {
     console.log(`Server listen at port: ${port}`);
 })

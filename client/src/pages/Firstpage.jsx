@@ -42,6 +42,14 @@ const Firstpage = () => {
 		}) 
 	}
 
+	const deleteQuestion = (id) => {
+		Axios.delete(`http://localhost:3002/delete/${id}`).then((response) => {
+			setQuestionsList(questionsList.filter((val) => {
+				return val.id !== id;  
+			}))
+		})
+	}
+
 	return (
 		<div>
 			<Box sx={{textAlign: 'center'}}> 
@@ -73,6 +81,14 @@ const Firstpage = () => {
 					</Box>
 				</form>
 			</Box>
+			<br />
+			<hr />
+			<br /> 
+			<Box>
+				<Typography variant="h5"> 
+					Questions List 
+				</Typography>
+			</Box>
 			<Box mt={2}>
 				{questionsList.map((questions, index) => (
 					<div key={index}>
@@ -93,6 +109,10 @@ const Firstpage = () => {
 									Answer: {questions.answer}  
 								</Typography>
 							</CardContent>
+							<Box>
+								<Button variant="contained" onClick={() => deleteQuestion(questions.id)}>Delete Question</Button>  
+							</Box>
+							<br /><br /> 
 						</Card>
 						<br /><br /> 
 					</div>
