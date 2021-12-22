@@ -11,8 +11,19 @@ app.use(express.json());
 const db = mysql.createConnection({
     user: "root",
     host: "localhost",
-    password: "admin",
+    password: "",
+    port: "3306",
     database: "questionsDatabase"
+})
+
+app.get('/questions', (req, res) => {
+    db.query('SELECT * FROM questions', (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    })
 })
 
 app.listen(port, () => {
