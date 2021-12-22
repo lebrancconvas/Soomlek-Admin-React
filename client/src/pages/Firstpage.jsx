@@ -13,6 +13,13 @@ const Firstpage = () => {
 	const [option4, setOption4] = useState('');
 	const [answer, setAnswer] = useState(''); 
 
+	const [newQuestion, setNewQuestion] = useState(''); 
+	const [newOption1, setNewOption1] = useState(''); 
+	const [newOption2, setNewOption2] = useState(''); 
+	const [newOption3, setNewOption3] = useState(''); 
+	const [newOption4, setNewOption4] = useState(''); 
+	const [newAnswer, setNewAnswer] = useState(''); 
+
 	useEffect(() => {
 		Axios.get('http://localhost:3002/questions').then((response) => {
 			setQuestionsList(response.data); 
@@ -40,6 +47,24 @@ const Firstpage = () => {
 				} 
 			]);
 		}) 
+	}
+
+	const updateQuestionQuestion = (id) => {
+		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+			setQuestionsList(
+				questionsList.map((val) => {
+					return val.id === id ? {
+						id: val.id,
+						question: newQuestion, 
+						option1: val.option1,
+						option2: val.option2,
+						option3: val.option3,
+						option4: val.option4,
+						answer: val.answer 
+					} : val; 
+				})
+			)
+		})
 	}
 
 	const deleteQuestion = (id) => {
