@@ -5,7 +5,9 @@ Admin Web for managing quiz data on my mathematics quiz app.
 ## Purpose 
 - Complete the requirement from my software engineering class project. 
 - Back Office for my application. 
-- 
+
+## Feature  
+- CRUD the data of quiz questions in my application. 
 
 ## Tools / Tech Stack 
 ### Front-End 
