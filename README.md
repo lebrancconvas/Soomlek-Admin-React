@@ -10,9 +10,9 @@ Admin Web for managing quiz data on my mathematics quiz app.
 ## Tools / Tech Stack 
 ### Front-End 
 	- ReactJS (Javascript + HTML) 
-  - React Router
-  - Material UI (MUI)
-	- Axios (API Management) 
+    - React Router
+    - Material UI (MUI)
+    - Axios (API Management) 
 ### Back-End 
 	- ExpressJS (NodeJS)
 ### Database 
