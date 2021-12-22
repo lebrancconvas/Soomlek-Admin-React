@@ -108,7 +108,7 @@ const Firstpage = () => {
 										<br />
 										IV) {questions.option4}
 										<br />
-										<br />
+										<br /> 
 									Answer: {questions.answer}  
 								</Typography>
 							</CardContent>
