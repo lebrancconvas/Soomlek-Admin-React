@@ -229,12 +229,12 @@ const Firstpage = () => {
 							</CardContent>
 							<Box>
 								<form action="">
-									<TextField placeholder="Edit Question" sx={{width: 500}} onChange={event => setNewQuestion(event.target.value)} /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionQuestion(questions.id)}>Edit Question</Button><br />
-									<TextField placeholder="Edit Option1" sx={{width: 500}} onChange={event => setNewOption1(event.target.value)} /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionOption1(questions.id)}>Edit Option1</Button><br />
-									<TextField placeholder="Edit Option2" sx={{width: 500}} onChange={event => setNewOption2(event.target.value)} /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionOption2(questions.id)}>Edit Option2</Button><br />
-									<TextField placeholder="Edit Option3" sx={{width: 500}} onChange={event => setNewOption3(event.target.value)} /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionOption3(questions.id)}>Edit Option3</Button><br />
-									<TextField placeholder="Edit Option4" sx={{width: 500}} onChange={event => setNewOption4(event.target.value)} /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionOption4(questions.id)}>Edit Option4</Button><br />
-									<TextField placeholder="Edit Answer" sx={{width: 500}} onChange={event => setNewAnswer(event.target.value)} /><br /> <Button variant="contained" type="submit" onClick={() => updateQuestionAnswer(questions.id)}>Edit Answer</Button><br />   
+									<TextField placeholder="Edit Question" sx={{width: 500}} onChange={event => setNewQuestion(event.target.value)} /><br /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionQuestion(questions.id)}>Edit Question</Button><br /><br /><br />
+									<TextField placeholder="Edit Option1" sx={{width: 500}} onChange={event => setNewOption1(event.target.value)} /><br /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionOption1(questions.id)}>Edit Option1</Button><br /><br /><br />
+									<TextField placeholder="Edit Option2" sx={{width: 500}} onChange={event => setNewOption2(event.target.value)} /><br /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionOption2(questions.id)}>Edit Option2</Button><br /><br /><br />
+									<TextField placeholder="Edit Option3" sx={{width: 500}} onChange={event => setNewOption3(event.target.value)} /><br /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionOption3(questions.id)}>Edit Option3</Button><br /><br /><br />
+									<TextField placeholder="Edit Option4" sx={{width: 500}} onChange={event => setNewOption4(event.target.value)} /><br /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionOption4(questions.id)}>Edit Option4</Button><br /><br /><br />
+									<TextField placeholder="Edit Answer" sx={{width: 500}} onChange={event => setNewAnswer(event.target.value)} /><br /><br /><Button variant="contained" type="submit" onClick={() => updateQuestionAnswer(questions.id)}>Edit Answer</Button><br /><br /><br /> 
 								</form>
 							</Box>
 							<Box mt={2}> 
