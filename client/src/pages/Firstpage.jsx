@@ -77,7 +77,7 @@ const Firstpage = () => {
 					<Typography variant="h6">Answer</Typography> 
 					<TextField fullWidth placeholder="Answer" onChange={event => setAnswer(event.target.value)} required/>  
 					<Box mt={3}> 
-						<Button variant="contained" type="submit" onClick={addQuestion}>Add Question</Button>   
+						<Button variant="contained" type="submit" onClick={addQuestion}>Add Question</Button>     
 					</Box>
 				</form>
 			</Box>
@@ -95,7 +95,9 @@ const Firstpage = () => {
 						<Card>
 							<CardContent>
 								<Typography>
-									Question {index + 1}: {questions.question} 
+									<Typography variant="h5"> 
+										Question {index + 1}: {questions.question} 
+									</Typography>
 									<br />
 									Choice: <br />  
 										I) {questions.option1}
@@ -105,6 +107,7 @@ const Firstpage = () => {
 										III) {questions.option3}
 										<br />
 										IV) {questions.option4}
+										<br />
 										<br />
 									Answer: {questions.answer}  
 								</Typography>
