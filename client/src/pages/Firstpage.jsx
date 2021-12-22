@@ -68,13 +68,13 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionOption1 = (id) => {
-		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/update', {option1: newOption1, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
 						id: val.id,
-						question: newQuestion, 
-						option1: val.option1,
+						question: val.question, 
+						option1: newOption1, 
 						option2: val.option2,
 						option3: val.option3,
 						option4: val.option4,
@@ -86,14 +86,14 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionOption2 = (id) => {
-		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/update', {option2: newOption2, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
 						id: val.id,
-						question: newQuestion, 
+						question: val.question, 
 						option1: val.option1,
-						option2: val.option2,
+						option2: newOption2, 
 						option3: val.option3,
 						option4: val.option4,
 						answer: val.answer 
@@ -104,15 +104,15 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionOption3 = (id) => {
-		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/update', {option3: newOption3, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
 						id: val.id,
-						question: newQuestion, 
+						question: val.question, 
 						option1: val.option1,
 						option2: val.option2,
-						option3: val.option3,
+						option3: newOption3, 
 						option4: val.option4,
 						answer: val.answer 
 					} : val; 
@@ -122,16 +122,16 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionOption4 = (id) => {
-		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/update', {option4: newOption4, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
 						id: val.id,
-						question: newQuestion, 
+						question: val.question,  
 						option1: val.option1,
 						option2: val.option2,
 						option3: val.option3,
-						option4: val.option4,
+						option4: newOption4, 
 						answer: val.answer 
 					} : val; 
 				})
@@ -140,7 +140,7 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionAnswer = (id) => {
-		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/update', {answer: newAnswer, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
@@ -150,7 +150,7 @@ const Firstpage = () => {
 						option2: val.option2,
 						option3: val.option3,
 						option4: val.option4,
-						answer: val.answer 
+						answer: newAnswer 
 					} : val; 
 				})
 			)
