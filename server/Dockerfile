@@ -7,6 +7,8 @@ COPY yarn.lock ./
 
 RUN yarn 
 
+COPY . . 
+
 ENV PORT=3002 
 EXPOSE 3002 
 
