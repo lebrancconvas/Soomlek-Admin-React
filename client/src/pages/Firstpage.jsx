@@ -1,9 +1,15 @@
 import React from 'react'; 
+import {Typography, TextField, Button} from '@mui/material'; 
+import {Box} from '@mui/system'; 
 
 const Firstpage = () => {
 	return (
 		<div>
-			<h1>Firstpage.</h1> 
+			<Box>
+				<Typography variant="h3"> 
+					Firstpage 
+				</Typography>
+			</Box> 
 		</div>
 	)
 }
