@@ -16,3 +16,6 @@ Admin Web for managing quiz data on my mathematics quiz app.
 	- ExpressJS (NodeJS)
 ### Database 
 	- MySQL (PHPmyAdmin + SQL)  
+
+### Text Editor / IDE 
+	- Visual Studio Code (VSCode) 
