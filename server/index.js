@@ -43,16 +43,72 @@ app.post('/create', (req, res) => {
     })
 })
 
-app.put('/update', (req, res) => {
+app.put('/updatequestion', (req, res) => {
     const id = req.body.id;
     const question = req.body.question;
+
+    db.query('UPDATE questions SET question = ? WHERE id = ?', [question, id], (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    })
+})
+
+app.put('/updateoption1', (req, res) => {
+    const id = req.body.id;
     const option1 = req.body.option1;
+
+    db.query('UPDATE questions SET option1 = ? WHERE id = ?', [option1, id], (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    })
+})
+app.put('/updateoption2', (req, res) => {
+    const id = req.body.id;
     const option2 = req.body.option2;
+
+    db.query('UPDATE questions SET option2 = ? WHERE id = ?', [option2, id], (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    })
+})
+app.put('/updateoption3', (req, res) => {
+    const id = req.body.id;
     const option3 = req.body.option3;
+
+    db.query('UPDATE questions SET option3 = ? WHERE id = ?', [option3, id], (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    })
+})
+app.put('/updateoption4', (req, res) => {
+    const id = req.body.id;
     const option4 = req.body.option4;
+
+    db.query('UPDATE questions SET option4 = ? WHERE id = ?', [option4, id], (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    })
+})
+app.put('/updateanswer', (req, res) => {
+    const id = req.body.id;
     const answer = req.body.answer;
 
-    db.query('UPDATE questions SET question = ?, option1 = ?, option2 = ?, option3 = ?, option4 = ?, answer = ? WHERE id = ?', [question, option1, option2, option3, option4, answer, id], (err, result) => {
+    db.query('UPDATE questions SET answer = ? WHERE id = ?', [answer, id], (err, result) => {
         if (err) {
             console.error(err);
         } else {

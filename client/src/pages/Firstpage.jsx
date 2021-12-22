@@ -50,10 +50,10 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionQuestion = (id) => {
-		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/updatequestion', {question: newQuestion, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
-					return val.id === id ? {
+					return val.id === id ? { 
 						id: val.id,
 						question: newQuestion, 
 						option1: val.option1,
@@ -68,7 +68,7 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionOption1 = (id) => {
-		Axios.put('http://localhost:3002/update', {option1: newOption1, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/updateoption1', {option1: newOption1, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
@@ -86,7 +86,7 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionOption2 = (id) => {
-		Axios.put('http://localhost:3002/update', {option2: newOption2, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/updateoption2', {option2: newOption2, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
@@ -104,7 +104,7 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionOption3 = (id) => {
-		Axios.put('http://localhost:3002/update', {option3: newOption3, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/updateoption3', {option3: newOption3, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
@@ -122,7 +122,7 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionOption4 = (id) => {
-		Axios.put('http://localhost:3002/update', {option4: newOption4, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/updateoption4', {option4: newOption4, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
@@ -140,7 +140,7 @@ const Firstpage = () => {
 	}
 
 	const updateQuestionAnswer = (id) => {
-		Axios.put('http://localhost:3002/update', {answer: newAnswer, id: id}).then((response) => {
+		Axios.put('http://localhost:3002/updateanswer', {answer: newAnswer, id: id}).then((response) => {
 			setQuestionsList(
 				questionsList.map((val) => {
 					return val.id === id ? {
