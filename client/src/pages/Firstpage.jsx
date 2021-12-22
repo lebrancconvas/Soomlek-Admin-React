@@ -1,7 +1,7 @@
 /* eslint-disable no-dupe-keys */
 import React, {useState, useEffect} from 'react';  
 import Axios from 'axios';
-import {Typography, TextField, Button} from '@mui/material'; 
+import {Typography, TextField, Button, Card, CardContent} from '@mui/material';  
 import {Box} from '@mui/system'; 
 
 const Firstpage = () => {
@@ -76,19 +76,25 @@ const Firstpage = () => {
 			<Box mt={2}>
 				{questionsList.map((questions, index) => (
 					<div key={index}>
-						Question {index + 1}: {questions.question} 
-						<br />
-						Choice: <br />  
-							I) {questions.option1}
-							<br />
-							II) {questions.option2}
-							<br />
-							III) {questions.option3}
-							<br />
-							IV) {questions.option4}
-							<br />
-						Answer: {questions.answer}  
-						<br /><br /><br />  
+						<Card>
+							<CardContent>
+								<Typography>
+									Question {index + 1}: {questions.question} 
+									<br />
+									Choice: <br />  
+										I) {questions.option1}
+										<br />
+										II) {questions.option2}
+										<br />
+										III) {questions.option3}
+										<br />
+										IV) {questions.option4}
+										<br />
+									Answer: {questions.answer}  
+								</Typography>
+							</CardContent>
+						</Card>
+						<br /><br /> 
 					</div>
 				))}
 			</Box>
