@@ -3,10 +3,14 @@ services:
   client: 
     container_name: client 
     image: client 
+    ports: 
+      - "3000:3000" 
     build: 
       context: ./client  
   server: 
     container_name: server 
     image: server 
+    ports: 
+      - "3002:3002" 
     build: 
       context: ./server 
