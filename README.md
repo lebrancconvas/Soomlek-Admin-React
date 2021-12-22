@@ -12,6 +12,7 @@ Admin Web for managing quiz data on my mathematics quiz app.
 	- ReactJS (Javascript + HTML) 
   	- React Router
   	- Material UI (MUI)
+		- Axios (API Management) 
 ### Back-End 
 	- ExpressJS (NodeJS)
 ### Database 
