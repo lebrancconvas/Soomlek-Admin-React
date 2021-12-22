@@ -26,6 +26,23 @@ app.get('/questions', (req, res) => {
     })
 })
 
+app.post('/create', (req, res) => {
+    const question = req.body.question;
+    const option1 = req.body.option1;
+    const option2 = req.body.option2;
+    const option3 = req.body.option3;
+    const option4 = req.body.option4;
+    const answer = req.body.answer;
+
+    db.query('INSERT INTO questions (question, option1, option2, option3, option4, answer) VALUES(?, ?, ?, ?, ?, ?)', [question, option1, option2, option3, option4, answer], (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send('Value is inserted successfully.');
+        }
+    })
+})
+
 app.listen(port, () => {
     console.log(`Server listen at port: ${port}`);
 })
