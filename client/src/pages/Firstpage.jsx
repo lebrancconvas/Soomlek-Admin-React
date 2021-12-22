@@ -67,6 +67,96 @@ const Firstpage = () => {
 		})
 	}
 
+	const updateQuestionOption1 = (id) => {
+		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+			setQuestionsList(
+				questionsList.map((val) => {
+					return val.id === id ? {
+						id: val.id,
+						question: newQuestion, 
+						option1: val.option1,
+						option2: val.option2,
+						option3: val.option3,
+						option4: val.option4,
+						answer: val.answer 
+					} : val; 
+				})
+			)
+		})
+	}
+
+	const updateQuestionOption2 = (id) => {
+		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+			setQuestionsList(
+				questionsList.map((val) => {
+					return val.id === id ? {
+						id: val.id,
+						question: newQuestion, 
+						option1: val.option1,
+						option2: val.option2,
+						option3: val.option3,
+						option4: val.option4,
+						answer: val.answer 
+					} : val; 
+				})
+			)
+		})
+	}
+
+	const updateQuestionOption3 = (id) => {
+		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+			setQuestionsList(
+				questionsList.map((val) => {
+					return val.id === id ? {
+						id: val.id,
+						question: newQuestion, 
+						option1: val.option1,
+						option2: val.option2,
+						option3: val.option3,
+						option4: val.option4,
+						answer: val.answer 
+					} : val; 
+				})
+			)
+		})
+	}
+
+	const updateQuestionOption4 = (id) => {
+		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+			setQuestionsList(
+				questionsList.map((val) => {
+					return val.id === id ? {
+						id: val.id,
+						question: newQuestion, 
+						option1: val.option1,
+						option2: val.option2,
+						option3: val.option3,
+						option4: val.option4,
+						answer: val.answer 
+					} : val; 
+				})
+			)
+		})
+	}
+
+	const updateQuestionAnswer = (id) => {
+		Axios.put('http://localhost:3002/update', {question: newQuestion, id: id}).then((response) => {
+			setQuestionsList(
+				questionsList.map((val) => {
+					return val.id === id ? {
+						id: val.id,
+						question: newQuestion, 
+						option1: val.option1,
+						option2: val.option2,
+						option3: val.option3,
+						option4: val.option4,
+						answer: val.answer 
+					} : val; 
+				})
+			)
+		})
+	}
+
 	const deleteQuestion = (id) => {
 		Axios.delete(`http://localhost:3002/delete/${id}`).then((response) => {
 			setQuestionsList(questionsList.filter((val) => {
