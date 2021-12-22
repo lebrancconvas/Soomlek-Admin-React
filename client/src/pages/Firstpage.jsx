@@ -228,12 +228,12 @@ const Firstpage = () => {
 								</Typography>
 							</CardContent>
 							<Box>
-								<TextField placeholder="Edit Question" sx={{width: 500}} /><br /><Button variant="contained">Edit Question</Button><br />
-								<TextField placeholder="Edit Option1" sx={{width: 500}} /><br /><Button variant="contained">Edit Option1</Button><br />
-								<TextField placeholder="Edit Option2" sx={{width: 500}} /><br /><Button variant="contained">Edit Option2</Button><br />
-								<TextField placeholder="Edit Option3" sx={{width: 500}} /><br /><Button variant="contained">Edit Option3</Button><br />
-								<TextField placeholder="Edit Option4" sx={{width: 500}} /><br /><Button variant="contained">Edit Option4</Button><br />
-								<TextField placeholder="Edit Answer" sx={{width: 500}} /><br /> <Button variant="contained">Edit Answer</Button><br />   
+								<TextField placeholder="Edit Question" sx={{width: 500}} /><br /><Button variant="contained" onClick={() => updateQuestionQuestion()}>Edit Question</Button><br />
+								<TextField placeholder="Edit Option1" sx={{width: 500}} /><br /><Button variant="contained" onClick={() => updateQuestionOption1()}>Edit Option1</Button><br />
+								<TextField placeholder="Edit Option2" sx={{width: 500}} /><br /><Button variant="contained" onClick={() => updateQuestionOption2()}>Edit Option2</Button><br />
+								<TextField placeholder="Edit Option3" sx={{width: 500}} /><br /><Button variant="contained" onClick={() => updateQuestionOption3()}>Edit Option3</Button><br />
+								<TextField placeholder="Edit Option4" sx={{width: 500}} /><br /><Button variant="contained" onClick={() => updateQuestionOption4()}>Edit Option4</Button><br />
+								<TextField placeholder="Edit Answer" sx={{width: 500}} /><br /> <Button variant="contained" onClick={() => updateQuestionAnswer()}>Edit Answer</Button><br />   
 							</Box>
 							<Box mt={2}> 
 								<Button variant="contained" onClick={() => deleteQuestion(questions.id)}>Delete Question</Button>  
