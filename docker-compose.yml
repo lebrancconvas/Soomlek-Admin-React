@@ -1,0 +1,12 @@
+version: '3'
+services: 
+  client: 
+    container_name: client 
+    image: client 
+    build: 
+      context: ./client  
+  server: 
+    container_name: server 
+    image: server 
+    build: 
+      context: ./server 
