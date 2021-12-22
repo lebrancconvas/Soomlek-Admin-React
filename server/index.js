@@ -43,6 +43,24 @@ app.post('/create', (req, res) => {
     })
 })
 
+app.put('/update', (req, res) => {
+    const id = req.body.id;
+    const question = req.body.question;
+    const option1 = req.body.option1;
+    const option2 = req.body.option2;
+    const option3 = req.body.option3;
+    const option4 = req.body.option4;
+    const answer = req.body.answer;
+
+    db.query('UPDATE questions SET question = ?, option1 = ?, option2 = ?, option3 = ?, option4 = ?, answer = ? WHERE id = ?', [question, option1, option2, option3, option4, answer, id], (err, result) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.send(result);
+        }
+    })
+})
+
 app.delete('/delete/:id', (req, res) => {
     const id = req.params.id;
     db.query('DELETE FROM questions WHERE id = ?', [id], (err, result) => {
